@@ -1,7 +1,8 @@
 # Klosterke
 
-## Installation
+## Installing and running the original assignment
+`cd ./casus`
+
 `composer install`
 
-## Running initial given tests
 `./vendor/bin/kahlan`
