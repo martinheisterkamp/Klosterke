@@ -92,7 +92,7 @@ $categories = array(
         "subcategories" => array(
             array(
                 "id" => 1,
-                "name" => "Bruin"
+                "name" => "Brown"
             ),
             array(
                 "id" => 2,
@@ -104,19 +104,27 @@ $categories = array(
             ),
             array(
                 "id" => 4,
-                "name" => "Wit"
+                "name" => "White"
             ),
             array(
                 "id" => 5,
-                "name" => "Blond"
+                "name" => "Blonde"
             ),
             array(
                 "id" => 6,
-                "name" => "Tripel"
+                "name" => "Triple"
             ),
             array(
                 "id" => 7,
-                "name" => "Quadrupel"
+                "name" => "Quadruple"
+            ),
+            array(
+                "id" => 8,
+                "name" => "IPA"
+            ),
+            array(
+                "id" => 9,
+                "name" => "Pilsner"
             ),
         )
     ),
