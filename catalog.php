@@ -1,6 +1,12 @@
 <?php
+/* 50 quality is too little to show that, with 10 days remaining (5*2=10) + 5 days remaining (5*3=15) an increment of 25 will happen for wines.
+* In the assignment description, it is said that the pub only uses high quality products...
+* Therefore I picked the max quality of 50 and added 25 for it in case a wine starts with the "given max quality".
+*/
+
 $minQuality = 0;
-$maxQuality = 50;
+$maxQuality = 75;
+$givenMaxQuality = 50; 
 
 $products = array(
     array(
@@ -32,10 +38,10 @@ $products = array(
         "name" => "Merlot",
         "quality" => 40,
         "flourish" => array(
-            "default" => -1,
+            "default" => 1,
             "daysRemaining" => array(
-                10 => -2,
-                5 => -3
+                10 => 2,
+                5 => 3
             )
         ),
         "categoryId" => 1,
@@ -47,10 +53,10 @@ $products = array(
         "name" => "Chardonnay",
         "quality" => 35,
         "flourish" => array(
-            "default" => -1,
+            "default" => 1,
             "daysRemaining" => array(
-                10 => -2,
-                5 => -3
+                10 => 2,
+                5 => 3
             )
         ),
         "categoryId" => 2,
