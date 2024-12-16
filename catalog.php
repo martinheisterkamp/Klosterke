@@ -11,7 +11,7 @@ $givenMaxQuality = 50;
 $products = array(
     array(
         "id" => 1,
-        "name" => "Beer",
+        "name" => "La Trappe Puur",
         "quality" => 30,
         "decay" => array(
             "default" => 1,
@@ -23,8 +23,8 @@ $products = array(
     ),
     array(
         "id" => 2,
-        "name" => "Abbey beer",
-        "quality" => 35,
+        "name" => "La Trappe Witte Trappist",
+        "quality" => 30,
         "decay" => array(
             "default" => 1,
             "expired" => 2
@@ -35,6 +35,18 @@ $products = array(
     ),
     array(
         "id" => 3,
+        "name" => "La Trappe Blond",
+        "quality" => 35,
+        "decay" => array(
+            "default" => 1,
+            "expired" => 2
+        ),
+        "categoryId" => 1,
+        "subcategoryId" => 3,
+        "supplierId" => 1
+    ),
+    array(
+        "id" => 4,
         "name" => "Merlot",
         "quality" => 40,
         "flourish" => array(
@@ -49,7 +61,7 @@ $products = array(
         "supplierId" => 2
     ),
     array(
-        "id" => 4,
+        "id" => 5,
         "name" => "Chardonnay",
         "quality" => 35,
         "flourish" => array(
@@ -64,7 +76,7 @@ $products = array(
         "supplierId" => 2
     ),
     array(
-        "id" => 5,
+        "id" => 6,
         "name" => "Nostradamus' Foresight Burger",
         "quality" => $maxQuality,
         "categoryId" => 3,
@@ -80,11 +92,31 @@ $categories = array(
         "subcategories" => array(
             array(
                 "id" => 1,
-                "name" => "Beer"
+                "name" => "Bruin"
             ),
             array(
                 "id" => 2,
-                "name" => "Abbey beer"
+                "name" => "Amber"
+            ),
+            array(
+                "id" => 3,
+                "name" => "Bock"
+            ),
+            array(
+                "id" => 4,
+                "name" => "Wit"
+            ),
+            array(
+                "id" => 5,
+                "name" => "Blond"
+            ),
+            array(
+                "id" => 6,
+                "name" => "Tripel"
+            ),
+            array(
+                "id" => 7,
+                "name" => "Quadrupel"
             ),
         )
     ),
@@ -117,9 +149,9 @@ $categories = array(
 $suppliers = array(
     array(
         "id" => 1,
-        "name" => "Brouwerij Bravoure",
-        "contact" => "info@bravoure.nl",
-        "city" => "Etten-Leur"
+        "name" => "Brouwerij de Koningshoeven",
+        "contact" => "info@latrappe.nl",
+        "city" => "Berkel-Enschot"
     ),
     array(
         "id" => 2,
@@ -137,6 +169,6 @@ $suppliers = array(
 
 $company = array(
     "name" => "Herberg 't Klosterke",
-    "city" => "Den Hout",
-    "description" => "Traditional Dutch pub"
+    "description" => "Traditional Dutch pub",
+    "city" => "Den Hout"
 );
