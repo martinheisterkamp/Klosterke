@@ -1,2 +1,7 @@
 # Klosterke
-Opdracht voor Nostradamus
+
+## Installation
+`composer install`
+
+## Running initial given tests
+`./vendor/bin/kahlan`
