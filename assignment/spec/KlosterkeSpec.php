@@ -1,5 +1,6 @@
 <?php
 
+use App\Product\BBQ\Burger;
 use App\Product\Beer\Blonde\LaTrappeBlond;
 use App\Product\Beer\Abbey\FranzisKaner;
 use App\Product\Wine\Red\Merlot;
@@ -149,7 +150,24 @@ describe('Klosterke', function () {
     context('BBQ', function () {
 
         context('Nostradamus` Foresight Burger', function () {
+            it('should show 200 days of preserving historical items', function () {
+                $item = new Burger(expires_in: 200);
 
+                $item->tick();
+
+                expect($item->expires_in)->toBe(199);
+                expect($item->quality)->toBe(80);
+
+                $item->tick(50);
+
+                expect($item->expires_in)->toBe(149);
+                expect($item->quality)->toBe(80);
+
+                $item->tick(150);
+
+                expect($item->expires_in)->toBe(-1);
+                expect($item->quality)->toBe(80);
+            });
         });
 
     });
