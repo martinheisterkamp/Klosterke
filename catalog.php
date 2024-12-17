@@ -1,12 +1,11 @@
 <?php
-/* 50 quality is too little to show that, with 10 days remaining (5*2=10) + 5 days remaining (5*3=15) an increment of 25 will happen for wines.
+/* 50 quality is too little to show that, when whine flourishes, the quality will increase by 25 when it flourishes in the last 10 days.
 * In the assignment description, it is said that the pub only uses high quality products...
-* Therefore I picked the max quality of 50 and added 25 for it in case a wine starts with the "given max quality".
+* Therefore I will allow high quality wine to increment past 50, to show the effects of flourishing.
 */
 
 $minQuality = 0;
-$maxQuality = 75;
-$givenMaxQuality = 50; 
+$maxQuality = 80; // BBQ has a static quality of 80
 
 $products = array(
     array(
