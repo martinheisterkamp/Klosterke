@@ -13,12 +13,6 @@ class FlourishingProduct extends AbstractProduct
         for ($i = 0; $i < $amount; $i++) {
             $this->expires_in -= 1;
 
-            /* Quality of wine tanks when it has expired */
-            if ($this->expires_in <= 0) {
-                $this->quality = $this->quality_floor;
-                return;
-            }
-
             /* Quality of wine increases normally */
             if($this->expires_in > 10) $this->quality += 1;
 
@@ -31,8 +25,10 @@ class FlourishingProduct extends AbstractProduct
             /* Quality of wine cannot exceed the given quality ceiling */
             if ($this->quality >= $this->quality_ceiling) $this->quality = $this->quality_ceiling;
 
-            /* Quality of wine cannot exceed the given quality floor */
-            if($this->quality <= $this->quality_floor) $this->quality = $this->quality_floor;
+            /* Quality of wine tanks after expired, and quality of wine cannot exceed the given quality floor */
+            if($this->expires_in <= 0 || $this->quality <= $this->quality_floor) {
+                $this->quality = $this->quality_floor;
+            }
         }
     }
 }

@@ -45,6 +45,15 @@ describe('Klosterke', function () {
                 expect($item->expires_in)->toBe(4);
                 expect($item->quality)->toBe(50);
             });
+
+            it('should show a negative number for expiry date and consistent quality', function () {
+                $item = new Merlot(expires_in: 5, quality: 48);
+
+                $item->tick(7);
+
+                expect($item->expires_in)->toBe(-2);
+                expect($item->quality)->toBe(0);
+            });
         });
 
         context('White Wine', function () {

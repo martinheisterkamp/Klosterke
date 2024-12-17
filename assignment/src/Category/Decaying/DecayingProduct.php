@@ -14,16 +14,11 @@ class DecayingProduct extends AbstractProduct
         for ($i = 0; $i < $amount; $i++) {
             $this->expires_in -= 1;
 
-            if($this->expires_in <= 0) {
-                $this->quality = $this->quality_floor;
-                return;
-            }
-
             /* Quality decreases normally */
             $this->quality -= 1;
 
             /* Quality cannot decrease below certain amount, so set it to that amount every tick instead */
-            if ($this->quality < $this->quality_floor) {
+            if ($this->expires_in <= 0 || $this->quality <= $this->quality_floor) {
                 $this->quality = $this->quality_floor;
             }
         }
