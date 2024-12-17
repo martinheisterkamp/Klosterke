@@ -47,9 +47,9 @@ describe('Klosterke', function () {
             });
         });
 
-        context('FranzisKaner', function () {
+        context('Franziskaner', function () {
             it('should show normal decay before expiry date', function () {
-                $item = new FranzisKaner(expires_in: 3, quality: 35);
+                $item = new Franziskaner(expires_in: 3, quality: 35);
 
                 $item->tick();
 
@@ -58,7 +58,7 @@ describe('Klosterke', function () {
             });
 
             it('should show faster decay after expiry date', function () {
-                $item = new FranzisKaner(expires_in: 3, quality: 35);
+                $item = new Franziskaner(expires_in: 3, quality: 35);
 
                 $item->tick(5);
 

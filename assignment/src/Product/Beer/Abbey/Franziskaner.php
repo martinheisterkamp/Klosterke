@@ -4,7 +4,7 @@ namespace App\Product\Beer\Abbey;
 
 use App\Category\DecayingProduct;
 
-class FranzisKaner extends DecayingProduct
+class Franziskaner extends DecayingProduct
 {
     protected int $expired_decay_rate = 2;
     public function __construct(

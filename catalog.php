@@ -12,8 +12,8 @@ $products = array(
             "default" => 1,
             "expired" => 2
         ),
-        "categoryId" => 2,
-        "subcategoryId" => 1,
+        "categoryId" => 1,
+        "subcategoryId" => 2,
         "supplierId" => 1
     ),
     array(
@@ -25,7 +25,7 @@ $products = array(
         ),
         "categoryId" => 1,
         "subcategoryId" => 3,
-        "supplierId" => 1
+        "supplierId" => 2
     ),
     array(
         "id" => 3,
@@ -38,9 +38,9 @@ $products = array(
                 5 => 3
             )
         ),
-        "categoryId" => 1,
+        "categoryId" => 2,
         "subcategoryId" => 1,
-        "supplierId" => 2
+        "supplierId" => 3
     ),
     array(
         "id" => 4,
@@ -55,7 +55,7 @@ $products = array(
         ),
         "categoryId" => 2,
         "subcategoryId" => 2,
-        "supplierId" => 2
+        "supplierId" => 3
     ),
     array(
         "id" => 5,
@@ -63,7 +63,7 @@ $products = array(
         "quality" => $maxQuality,
         "categoryId" => 3,
         "subcategoryId" => 1,
-        "supplierId" => 3
+        "supplierId" => 4
     )
 );
 
@@ -100,24 +100,18 @@ $categories = array(
                 "id" => 7,
                 "name" => "Pilsner"
             ),
-        )
-    ),
-    array(
-        "id" => 2,
-        "type" => "Quickly decaying",
-        "subcategories" => array(
             array(
-                "id" => 1,
+                "id" => 8,
                 "name" => "Amber"
             ),
             array(
-                "id" => 2,
+                "id" => 9,
                 "name" => "Bock"
             )
         )
     ),
     array(
-        "id" => 3,
+        "id" => 2,
         "type" => "Flourishing",
         "subcategories" => array(
             array(
@@ -131,7 +125,7 @@ $categories = array(
         )
     ),
     array(
-        "id" => 4,
+        "id" => 3,
         "type" => "Historical",
         "subcategories" => array(
             array(
@@ -145,18 +139,24 @@ $categories = array(
 $suppliers = array(
     array(
         "id" => 1,
+        "name" => "Franziskaner-Brauerei",
+        "contact" => "info@franziskaner-weissbier.de",
+        "city" => "München"
+    ),
+    array(
+        "id" => 2,
         "name" => "Brouwerij de Koningshoeven",
         "contact" => "info@latrappe.nl",
         "city" => "Berkel-Enschot"
     ),
     array(
-        "id" => 2,
+        "id" => 3,
         "name" => "La Bodega",
         "contact" => "info@labodega.nl",
         "city" => "Tilburg",
     ),
     array(
-        "id" => 3,
+        "id" => 4,
         "name" => "Heyde Hoeve",
         "contact" => "info@heydehoeve.nl",
         "city" => "Nuenen"
