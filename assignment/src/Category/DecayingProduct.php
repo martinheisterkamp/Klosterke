@@ -21,8 +21,4 @@ class DecayingProduct extends AbstractProduct
 
         $this->assertQuality();
     }
-
-    public function setExpiryDecayRate(int $amount): void {
-        $this->expired_decay_rate = $amount;
-    }
 }
