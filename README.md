@@ -22,3 +22,11 @@
 `npm install`
 
 `npm run dev`
+
+### Task list
+* Create models and migrations
+* Send data to Vue components as props via the controller
+* Create static info table component displaying each product and its supplier
+* Create dynamic table showing products
+  * Create inputs to add products with their expiry date
+  * With left and right arrow buttons marking each day, so the flourish / decay of each item can be tracked 
