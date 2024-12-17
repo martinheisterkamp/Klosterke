@@ -1,6 +1,7 @@
 <?php
 
 use App\Product\Beer\Blonde\LaTrappeBlond;
+use App\Product\Beer\Abbey\LaTrappePuur;
 use App\Product\Wine\Red\Merlot;
 use App\Product\Wine\White\Chardonnay;
 
@@ -24,6 +25,35 @@ describe('Klosterke', function () {
 
                 expect($item->expires_in)->toBe(-1);
                 expect($item->quality)->toBe(33);
+            });
+
+            it('should show the quality floor', function () {
+                $item = new LaTrappeBlond(expires_in: 10, quality: 5);
+
+                $item->tick(15);
+
+                expect($item->expires_in)->toBe(-5);
+                expect($item->quality)->toBe(0);
+            });
+        });
+
+        context('La Trappe Puur', function () {
+            it('should show normal decay before expiry date', function () {
+                $item = new LaTrappePuur(expires_in: 3, quality: 35);
+
+                $item->tick();
+
+                expect($item->expires_in)->toBe(2);
+                expect($item->quality)->toBe(34);
+            });
+
+            it('should show faster decay after expiry date', function () {
+                $item = new LaTrappePuur(expires_in: 3, quality: 35);
+
+                $item->tick(5);
+
+                expect($item->expires_in)->toBe(-2);
+                expect($item->quality)->toBe(27);
             });
         });
     });
