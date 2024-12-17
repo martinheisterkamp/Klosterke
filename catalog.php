@@ -6,7 +6,7 @@ $qualityBBQ = 80; // BBQ has a static quality of 80
 $products = array(
     array(
         "id" => 1,
-        "name" => "La Trappe Puur",
+        "name" => "Franziskaner",
         "quality" => 30,
         "decay" => array(
             "default" => 1,

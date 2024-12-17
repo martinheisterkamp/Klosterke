@@ -1,7 +1,7 @@
 <?php
 
 use App\Product\Beer\Blonde\LaTrappeBlond;
-use App\Product\Beer\Abbey\LaTrappePuur;
+use App\Product\Beer\Abbey\FranzisKaner;
 use App\Product\Wine\Red\Merlot;
 use App\Product\Wine\White\Chardonnay;
 
@@ -37,9 +37,9 @@ describe('Klosterke', function () {
             });
         });
 
-        context('La Trappe Puur', function () {
+        context('FranzisKaner', function () {
             it('should show normal decay before expiry date', function () {
-                $item = new LaTrappePuur(expires_in: 3, quality: 35);
+                $item = new FranzisKaner(expires_in: 3, quality: 35);
 
                 $item->tick();
 
@@ -48,7 +48,7 @@ describe('Klosterke', function () {
             });
 
             it('should show faster decay after expiry date', function () {
-                $item = new LaTrappePuur(expires_in: 3, quality: 35);
+                $item = new FranzisKaner(expires_in: 3, quality: 35);
 
                 $item->tick(5);
 
@@ -137,5 +137,11 @@ describe('Klosterke', function () {
         });
     });
 
-    context('BBQ', function () {});
+    context('BBQ', function () {
+
+        context('Nostradamus` Foresight Burger', function () {
+
+        });
+
+    });
 });
