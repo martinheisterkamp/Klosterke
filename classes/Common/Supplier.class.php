@@ -1,6 +1,7 @@
 <?php
 
-class Supplier {
+class Supplier
+{
     public function __construct(
         private int $id,
         private string $name,

@@ -1,6 +1,7 @@
 <?php
 
-class Company {
+class Company
+{
     public function __construct(
         private string $name,
         private string $description,

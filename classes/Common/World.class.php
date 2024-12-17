@@ -1,7 +1,6 @@
 <?php
 
-class World {
-    public function createProduct() {
-        
-    }
+class World
+{
+    public function createProduct() {}
 }

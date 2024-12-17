@@ -1,6 +1,5 @@
 <?php
-namespace App\Product;
 
-use ITick;
+namespace App\Product;
 
 abstract class HistoricalProduct extends AbstractProduct {}
