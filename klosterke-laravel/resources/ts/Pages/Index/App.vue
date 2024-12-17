@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {usePage} from "@inertiajs/vue3";
 
-const props = usePage();
+defineProps({ test: String })
 </script>
 <template>
     <div id="app">
@@ -11,6 +11,6 @@ const props = usePage();
             Vue3 and Laravel...
         </h1>
         <p>Props...</p>
-        {{props}}
+        {{test}}
     </div>
 </template>
