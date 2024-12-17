@@ -2,7 +2,7 @@
 
 namespace App\Product\Beer\Blonde;
 
-use App\Category\Decaying\DecayingProduct;
+use App\Category\DecayingProduct;
 
 class LaTrappeBlond extends DecayingProduct
 {
