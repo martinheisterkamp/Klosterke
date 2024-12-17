@@ -16,36 +16,23 @@ $products = array(
             "default" => 1,
             "expired" => 2
         ),
-        "categoryId" => 1,
+        "categoryId" => 2,
         "subcategoryId" => 1,
         "supplierId" => 1
     ),
     array(
         "id" => 2,
-        "name" => "La Trappe Witte Trappist",
-        "quality" => 30,
-        "decay" => array(
-            "default" => 1,
-            "expired" => 2
-        ),
-        "categoryId" => 1,
-        "subcategoryId" => 2,
-        "supplierId" => 1
-    ),
-    array(
-        "id" => 3,
         "name" => "La Trappe Blond",
         "quality" => 35,
         "decay" => array(
-            "default" => 1,
-            "expired" => 2
+            "default" => 1
         ),
         "categoryId" => 1,
         "subcategoryId" => 3,
         "supplierId" => 1
     ),
     array(
-        "id" => 4,
+        "id" => 3,
         "name" => "Merlot",
         "quality" => 40,
         "flourish" => array(
@@ -60,7 +47,7 @@ $products = array(
         "supplierId" => 2
     ),
     array(
-        "id" => 5,
+        "id" => 4,
         "name" => "Chardonnay",
         "quality" => 35,
         "flourish" => array(
@@ -75,7 +62,7 @@ $products = array(
         "supplierId" => 2
     ),
     array(
-        "id" => 6,
+        "id" => 5,
         "name" => "Nostradamus' Foresight Burger",
         "quality" => $maxQuality,
         "categoryId" => 3,
@@ -95,40 +82,46 @@ $categories = array(
             ),
             array(
                 "id" => 2,
-                "name" => "Amber"
-            ),
-            array(
-                "id" => 3,
-                "name" => "Bock"
-            ),
-            array(
-                "id" => 4,
                 "name" => "White"
             ),
             array(
-                "id" => 5,
+                "id" => 3,
                 "name" => "Blonde"
             ),
             array(
-                "id" => 6,
+                "id" => 4,
                 "name" => "Triple"
             ),
             array(
-                "id" => 7,
+                "id" => 5,
                 "name" => "Quadruple"
             ),
             array(
-                "id" => 8,
+                "id" => 6,
                 "name" => "IPA"
             ),
             array(
-                "id" => 9,
+                "id" => 7,
                 "name" => "Pilsner"
             ),
         )
     ),
     array(
         "id" => 2,
+        "type" => "Quickly decaying",
+        "subcategories" => array(
+            array(
+                "id" => 1,
+                "name" => "Amber"
+            ),
+            array(
+                "id" => 2,
+                "name" => "Bock"
+            )
+        )
+    ),
+    array(
+        "id" => 3,
         "type" => "Flourishing",
         "subcategories" => array(
             array(
@@ -142,7 +135,7 @@ $categories = array(
         )
     ),
     array(
-        "id" => 3,
+        "id" => 4,
         "type" => "Historical",
         "subcategories" => array(
             array(

@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Common;
+
 class Supplier
 {
     public function __construct(
