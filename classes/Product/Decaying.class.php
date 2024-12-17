@@ -1,10 +1,8 @@
 <?php
 namespace App\Product;
 
-use ITick;
-
 abstract class DecayingProduct extends AbstractProduct {
-    
+
     public function tick(int $amount = 1): void {
         for($i = 0; $i < $amount; $i++) {
             $this->expires_in -= 1;
