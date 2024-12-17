@@ -35,6 +35,15 @@ describe('Klosterke', function () {
                 expect($item->expires_in)->toBe(-5);
                 expect($item->quality)->toBe(0);
             });
+
+            it('should show the quality ceiling', function () {
+                $item = new LaTrappeBlond(expires_in: 10, quality: 55);
+
+                $item->tick();
+
+                expect($item->expires_in)->toBe(9);
+                expect($item->quality)->toBe(50);
+            });
         });
 
         context('FranzisKaner', function () {
@@ -117,7 +126,7 @@ describe('Klosterke', function () {
                 expect($item->quality)->toBe(29);
             });
 
-            it('should show 6 days of 10-day flourish', function () {
+            it('should show 6 days of flourish, including some 10-day flourish', function () {
                 $item = new Chardonnay(expires_in: 12, quality: 25);
 
                 $item->tick(amount: 6);
