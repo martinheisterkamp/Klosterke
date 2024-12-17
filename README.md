@@ -14,8 +14,11 @@
 
 `./vendor/bin/kahlan`
 
-## Installing the Laravel+Vue App
+## Installing and running the Laravel+Vue App
 `cd ./klosterke-laravel`
+
 `composer install`
 
-`php artisan serve`
+`npm install`
+
+`npm run dev`
