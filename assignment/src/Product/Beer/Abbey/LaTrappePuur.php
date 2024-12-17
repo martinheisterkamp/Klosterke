@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Product;
+namespace App\Product\Beer\Abbey;
 
 use App\Category\Decaying\QuicklyDecayingProduct;
 

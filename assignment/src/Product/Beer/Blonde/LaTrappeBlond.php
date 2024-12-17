@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Product;
+namespace App\Product\Beer\Blonde;
 
 use App\Category\Decaying\DecayingProduct;
 

@@ -1,11 +1,32 @@
 <?php
 
+use App\Product\Beer\Blonde\LaTrappeBlond;
 use App\Product\Wine\Red\Merlot;
 use App\Product\Wine\White\Chardonnay;
 
 describe('Klosterke', function () {
 
-    context('Beers', function () {});
+    context('Beers', function () {
+        context('La Trappe Blond', function () {
+            it('should show normal decay', function () {
+                $item = new LaTrappeBlond(expires_in: 15, quality: 35);
+
+                $item->tick();
+
+                expect($item->expires_in)->toBe(14);
+                expect($item->quality)->toBe(34);
+            });
+
+            it('should show normal decay after expiry date', function () {
+                $item = new LaTrappeBlond(expires_in: 1, quality: 35);
+
+                $item->tick(2);
+
+                expect($item->expires_in)->toBe(-1);
+                expect($item->quality)->toBe(33);
+            });
+        });
+    });
 
     context('Wines', function () {
 
